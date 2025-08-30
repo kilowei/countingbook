@@ -9,3 +9,14 @@ jobs:
         steps:
             - id: s00
               run: echo ${{github.repository}}
+            
+            - run: echo "before " && ls -l
+            # setup the environment
+            - id: s02
+              uses: actions/setup-node@v4
+              with:
+                node-version: 24
+
+            - id: s03
+              uses: actions/checkout@v5
+            - run: echo "before " && ls -l
