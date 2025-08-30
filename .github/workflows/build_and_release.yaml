@@ -1,0 +1,11 @@
+name: build_and_release
+
+on:
+    - push
+
+jobs:
+    greetings:
+        runs-on: ubuntu-latest
+        steps:
+            - id: s00
+              run: echo ${{github.repository}}
