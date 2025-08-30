@@ -20,3 +20,8 @@ jobs:
             - id: s03
               uses: actions/checkout@v5
             - run: echo "before " && ls -l
+
+            - id: s04
+              run: npm i -g @angular/cli && npm ci && echo "Installed"     # install Angular cli and install packages from package.json
+
+            
